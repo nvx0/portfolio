@@ -10,6 +10,8 @@ Generate your portfolio
 - Dark theme
 - Own Image
 - Own title 
+- Theme remember
+<br>
 .. more
 
 # Setup your portfolio:
