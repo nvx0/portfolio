@@ -1,0 +1,307 @@
+<style>
+    body {
+        background-color: white;
+    }
+</style>
+
+<!DOCTYPE HTML> 
+<html> 
+    <head> 
+        <title> 
+            nvx
+        </title>
+    </head> 
+	<br>
+
+    <style>
+
+        #snackbar {
+          visibility: hidden;
+          min-width: 250px;
+          margin-left: -110px;
+          background-color: #7289DA;
+          border-radius: 30px;
+          color: #fff;
+          text-align: center;
+          border-radius: 2px;
+          padding: 16px;
+          position: fixed;
+          z-index: 1;
+          left: 50%;
+          bottom: 30px;
+          font-size: 17px;
+          
+        }
+
+        button {
+            border: none !important;
+            outline: none  !important;
+          background-color: #7289DA;
+          border-radius: 30px;
+          color: white;
+          width: 130px;
+          height: 30px;
+          
+        }
+        
+        #snackbar.show {
+        border-radius: 30px;
+          visibility: visible;
+          -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+          animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+        
+        @-webkit-keyframes fadein {
+          from {bottom: 0; opacity: 0;} 
+          to {bottom: 30px; opacity: 1;}
+        }
+        
+        @keyframes fadein {
+          from {bottom: 0; opacity: 0;}
+          to {bottom: 30px; opacity: 1;}
+        }
+        
+        @-webkit-keyframes fadeout {
+          from {bottom: 30px; opacity: 1;} 
+          to {bottom: 0; opacity: 0;}
+        }
+        
+        @keyframes fadeout {
+          from {bottom: 30px; opacity: 1;}
+          to {bottom: 0; opacity: 0;}
+        }
+
+        [contenteditable] {
+            outline: 0px solid transparent;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <div id="snackbar">Changed theme</div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+            * {
+                font-family: 'Poppins', sans-serif;
+            }
+        </style>
+
+        <script>
+            function sleep(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+
+            document.title="fulstak borowik"
+            </script>
+            
+      
+    <body style = "text-align:left; margin-left: 600px;">
+
+        <img style="float:right!important; width: 250px; height: 250px; padding-right: 500px;" id='imgMain' src="files/1.svg">
+
+        <div id="color">
+           
+        <h1 style = "right: 100px;" id="1"> 
+            nvx (cloud3)
+        </h1> 
+        <p style = "right: 100px;" id="2"> 
+            Hi there 👋, I'm Jakub or nvx. 
+        </p> 
+        <p style = "right: 100px;" id="3"> 
+            I came from Poland but I live in England.
+        </p> 
+        <p style = "right: 100px;" id="4"> 
+            Intrested in Nasa 🚀 and PI (π) 🐱‍💻
+        </p> 
+        <br>
+        <script>
+
+            function setCookie(name,value,days) {
+                var expires = "";
+                if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days*24*60*60*1000));
+                expires = "; expires=" + date.toUTCString();
+                }
+                    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+                }
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+function eraseCookie(name) {   
+    document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+
+    if(getCookie(`color`)) {
+        document.body.style.background = getCookie(`color`);
+    }
+
+            function changeColor(color) {
+                document.body.style.background = color;
+            }
+
+            function notify() {
+                    var x = document.getElementById("snackbar");
+                    x.className = "show";
+                    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+                }
+              
+            function l() {
+
+
+                if (document.body.style.background == "rgb(51, 51, 51)") {
+                    document.getElementById('snackbar').innerHTML = 'Changed theme to white';
+                    changeColor('white');
+                    document.getElementById('lcolor').innerHTML = 'Turn off lights';
+                    document.getElementById("color").style.color = "black";
+                    notify()
+                    eraseCookie(`color`)
+                    setCookie(`color`,`white`, 7)
+                } else {
+                    document.getElementById('lcolor').innerHTML = 'Turn on lights';
+                    document.getElementById('snackbar').innerHTML = 'Changed theme to black';
+                    document.getElementById("color").style.color = "white";
+
+                eraseCookie(`color`)
+                changeColor('#333');
+                setCookie(`color`,`#333`, 7)
+                notify()
+                }
+            }      
+            
+            function r() {
+                    let c = Math.floor(Math.random()*16777215).toString(16);
+                    document.getElementById('snackbar').innerHTML = `Changed background color to: #${c}`;
+                    document.getElementById("color").style.color = "white";
+                    changeColor(`#${c}`);
+                    notify()
+                }
+
+                document.addEventListener("DOMContentLoaded", function(){
+                    document.getElementById("InsertCSS").style.visibility = 'hidden';
+                    document.getElementById("dl").style.visibility = 'hidden';
+                    document.getElementById("imgchange").style.visibility = 'hidden';
+                    document.getElementById("exit").style.visibility = 'hidden';
+                    document.getElementById("titleChange").style.visibility = 'hidden';
+                });
+
+
+            function edit() {
+                document.getElementById("color").setAttribute('contenteditable', true);
+                document.getElementById("InsertCSS").style.visibility = 'visible';
+                document.getElementById("dl").style.visibility = 'visible';
+                document.getElementById("imgchange").style.visibility = 'visible';
+                document.getElementById("exit").style.visibility = 'visible';
+                document.getElementById("titleChange").style.visibility = 'visible';
+            }
+    
+            function insertcss() {
+                const res = prompt("Insert a CSS code to website", "body { background-color: red }");
+                const addCSS = s => document.head.appendChild(document.createElement("style")).innerHTML=s;
+                addCSS(res)
+
+            }
+
+            function download(filename, text) {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+}
+
+function urlImage() {
+            const i = prompt("Below paste your image url. PNG, JPG, GIF are accepted")
+            document.getElementById("imgMain").src=i
+}
+
+function titleSet() {
+    const i = prompt("Below input a name of your website")
+    document.title = i
+}
+
+function dl() {
+    document.getElementById("editbtn").style.visibility = 'hidden';
+    document.getElementById("color").setAttribute('contenteditable', false);
+    document.getElementById('snackbar').innerHTML = `Open-source website generators by nvx. Dont remove this.`
+    download("index.html",document.documentElement.outerHTML);
+    document.getElementById("editbtn").style.visibility = 'visible';
+    document.getElementById("color").setAttribute('contenteditable', true);
+    document.getElementById('snackbar').innerHTML = `By nvx.`
+}
+        </script> 
+    </body> 
+
+    <button onclick = "l()" id="lcolor"> 
+        Turn off ligths
+    </button>
+    <button onclick = "r()" id="lcolor"> 
+        Random color
+    </button>
+
+    <button onclick = "edit()" id="editbtn"> 
+        Edit page
+    </button>
+    <button onclick = "insertcss()" id="InsertCSS"> 
+        Insert CSS
+    </button>
+    <br>
+    <br>
+    <button onclick = "urlImage()" style="top: 10px" id="imgchange"> 
+        Change image
+    </button>
+    <button onclick = "titleSet()" style="top: 10px" id="titleChange"> 
+        Change title
+    </button>
+    <button onclick = "dl()" style="top: 10px" id="dl"> 
+        Download
+    </button>
+    <button onclick = "location.reload()" style="background-color: rgb(253, 43, 43);" style="top: 10px" id="exit"> 
+        Exit
+    </button>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <p style="right: 100px;" id="footer"> 
+        By nvx.
+    </p>
+
+</div>          
+</html>   
