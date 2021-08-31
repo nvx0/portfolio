@@ -1,4 +1,16 @@
 # portfolio
 Generate your portfolio
-# demo 
+
+# Benefits
+- Easy to use
+- Easy to setup
+- Drag and drop 
+- Own CSS
+- Notifications
+- Dark theme
+- Own Image
+- Own title 
+.. more
+
+# Setup your portfolio:
 https://nvx0.github.io/portfolio/
