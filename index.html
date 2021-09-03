@@ -156,10 +156,11 @@ function eraseCookie(name) {
 
     if(getCookie(`color`)) {
         document.body.style.background = getCookie(`color`);
-	if (getCookie(`color`) === "rgb(51, 51, 51)") {
+	if (getCookie(`color`) === "#333") {
 		 document.getElementById("color").style.color = "white";
-	}
+	} else {
 	    		 document.getElementById("color").style.color = "black";
+	}
     }
 
             function changeColor(color) {
